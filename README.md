@@ -5,3 +5,10 @@ Instructions
 
 
 
+Edit configuration file
+------
+
+	vim config/secrets.js
+
+
+
