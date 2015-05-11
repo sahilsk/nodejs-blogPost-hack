@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="/medium-editor/dist/css/medium-editor.css"> 
+<link rel="stylesheet" href="/medium-editor/dist/css/themes/default.css"> 
+<script src="/medium-editor/dist/js/medium-editor.js"></script>
+<script src="/jquery/dist/jquery.min.js"></script>
+
+
+<h2> Add new post here  </h2>
+
+<form action="/posts" method="post" id="postForm">
+	<input type="text" name="title" id="title" placeholder="title" required=true/>
+
+
+	<div class="editor" style=" border:1px solid #ccc;">
+		<p> dfd </p>
+
+	</div>
+	<input type="hidden" name="content" val="" id="content" />
+	<button > Submit </button>
+</form>
+
+	
+<script type="text/javascript">
+
+	var editor = new MediumEditor('.editor');
+	
+	$("form#postForm").submit( function(e){
+		e.preventDefault();
+		var that = $("form#postForm");
+		$("input#content").eq(0).attr("value", $("form#postForm").find(".editor").eq(0).html()  );
+		this.submit();
+	});
+
+</script>
+
+
+
+
+
+

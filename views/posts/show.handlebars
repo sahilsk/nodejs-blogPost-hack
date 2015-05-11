@@ -1,0 +1,10 @@
+<h1> {{ title }} </h1>
+
+<a href="/posts" > Show all </a>
+<ul class="threads">
+  {{#each threads}}
+    {{{ content }}}
+   	{{#if commentable }}
+  	 	<a href="#"> Add comment </a>
+   {{/if}}
+  {{/each}}

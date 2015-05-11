@@ -1,0 +1,12 @@
+<h1> All Posts </h1>
+
+<a href="/posts/new" > Add new </a>
+
+
+<ul class="post_list">
+  {{#each posts}}
+    <li>{{this }}
+    <a href="/posts/{{this._id}}"> See more </a>
+    </li>
+  {{/each}}
+</ul>
